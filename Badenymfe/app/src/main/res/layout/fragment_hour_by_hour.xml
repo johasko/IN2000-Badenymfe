@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.badenymfe.viewmodel.ForecastViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:id="@+id/talking_jelly_hour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="invisible">
+
+            <ImageView
+                android:id="@+id/talking_jelly_pic"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/ic_jellyfish_talking" />
+
+            <TextView
+                android:id="@+id/talking_jelly_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/talking_jelly_pic"
+                android:layout_alignTop="@+id/talking_jelly_pic"
+                android:layout_alignBottom="@+id/talking_jelly_pic"
+                android:layout_alignParentEnd="false"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="68dp"
+                android:layout_marginBottom="155dp"
+                android:text="@string/text_talking_jelly_hour"
+                android:textAlignment="center"
+                android:textColor="#424242"
+                android:textSize="15dp"/>
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/loading_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:goneIfNotNull="@{viewModel.timeAndDays}"
+            android:layout_gravity="center" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/hour_item" />
+
+    </FrameLayout>
+
+</layout>

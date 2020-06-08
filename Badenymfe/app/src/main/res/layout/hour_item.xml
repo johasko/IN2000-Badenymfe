@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="timeAndDay"
+            type="org.joda.time.DateTime" />
+
+        <variable
+            name="hourCallback"
+            type="com.example.badenymfe.adapter.HourClick" />
+
+        <variable
+            name="formattedDatetime"
+            type="String" />
+
+    </data>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="5dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> hourCallback.onClick(timeAndDay)}">
+
+            <TextView
+                android:layout_margin="14dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@{formattedDatetime}"
+                android:textSize="14pt"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

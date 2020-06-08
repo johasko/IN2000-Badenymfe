@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App theme -->
+    <color name="colorPrimaryDark">@color/colorBlueDark</color>
+    <color name="colorPrimary">@color/colorBlue</color>
+    <color name="colorAccent">@color/colorBrown</color>
+
+    <!-- Color scheme from: https://coolors.co/adeee3-86deb7-63b995-50723c-423e28 -->
+    <color name="colorBrown">#423e28</color>
+    <color name="colorGreen">#50723c</color>
+    <color name="colorBlueDark">#75B9BE</color>
+    <color name="colorBlue">#A7E2E3</color>
+    <color name="colorBlueLight">#adeee3</color>
+
+
+    <!-- Other colors -->
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorRed">#AD343E</color>
+
+</resources>

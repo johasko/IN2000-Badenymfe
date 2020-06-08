@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/locationsFragment">
+
+    <fragment
+        android:id="@+id/locationsFragment"
+        android:name="com.example.badenymfe.userinterface.LocationsFragment"
+        android:label="Mine favoritter">
+        <action
+            android:id="@+id/action_locationsFragment_to_hourByHourFragment"
+            app:destination="@id/hourByHourFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/forecastFragment"
+        android:name="com.example.badenymfe.userinterface.ForecastFragment"
+        android:label="Værmelding" />
+
+    <activity
+        android:id="@+id/mapsActivity"
+        android:name="com.example.badenymfe.userinterface.MapsActivity"
+        android:label="Kart"
+        tools:layout="@layout/activity_maps"></activity>
+
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.badenymfe.userinterface.SettingsFragment"
+        android:label="Innstillinger" />
+
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.badenymfe.userinterface.AboutFragment"
+        android:label="Om Badenymfe" />
+
+    <fragment
+        android:id="@+id/hourByHourFragment"
+        android:name="com.example.badenymfe.userinterface.HourByHourFragment"
+        android:label="Time for time">
+        <action
+            android:id="@+id/action_hourByHourFragment_to_forecastFragment"
+            app:destination="@id/forecastFragment" />
+    </fragment>
+
+</navigation>

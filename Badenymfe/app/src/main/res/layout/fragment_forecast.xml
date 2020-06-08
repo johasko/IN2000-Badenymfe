@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.badenymfe.viewmodel.ForecastViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ui_gen"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.weatherForecast.highCloudsText}"
+                android:drawableStart="@drawable/ic_temp_image"
+                style="@style/DefaultTextAppearance"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.weatherForecast.mediumCloudsText}"
+                android:drawableStart="@drawable/ic_temp_image"
+                style="@style/DefaultTextAppearance"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.weatherForecast.lowCloudsText}"
+                android:drawableStart="@drawable/ic_temp_image"
+                style="@style/DefaultTextAppearance"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.weatherForecast.cloudinessText}"
+                android:drawableStart="@drawable/ic_temp_image"
+                style="@style/DefaultTextAppearance"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id='@+id/temperature_textview'
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@{viewModel.weatherForecast.airTemperatureText}"
+                android:drawableStart="@drawable/ic_thermometer"
+                style="@style/DefaultTextAppearance"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.weatherForecast.dewPointTemperatureText}"
+                android:drawableStart="@drawable/ic_temp_image"
+                style="@style/DefaultTextAppearance"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.weatherForecast.atmosphericPressureText}"
+                android:drawableStart="@drawable/ic_temp_image"
+                style="@style/DefaultTextAppearance"
+                android:visibility="gone"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.weatherForecast.windDirectionText}"
+                android:drawableStart="@drawable/ic_temp_image"
+                style="@style/DefaultTextAppearance"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id='@+id/windSpeed_textview'
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@{viewModel.weatherForecast.windSpeedText}"
+                android:drawableStart="@drawable/ic_wind"
+                style="@style/DefaultTextAppearance"
+                />
+
+
+            <TextView
+                android:id='@+id/windDescription_textview'
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@{viewModel.weatherForecast.windDescriptionText}"
+                android:drawableStart="@drawable/ic_wind"
+                style="@style/DefaultTextAppearance"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.weatherForecast.humidityText}"
+                android:drawableStart="@drawable/ic_temp_image"
+                style="@style/DefaultTextAppearance"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.weatherForecast.fogText}"
+                android:drawableStart="@drawable/ic_temp_image"
+                style="@style/DefaultTextAppearance"
+                android:visibility="gone"
+                />
+
+
+
+            <TextView
+                android:id='@+id/seaTemperature_textview'
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="140dp"
+                android:text="@{viewModel.oceanForecast.seaTemperatureText}"
+                android:drawableStart="@drawable/ic_thermometer"
+                style="@style/DefaultTextAppearance"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.oceanForecast.currentDirectionText}"
+                android:drawableStart="@drawable/ic_current_direction"
+                style="@style/DefaultTextAppearance"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.oceanForecast.currentSpeedText}"
+                android:drawableStart="@drawable/ic_current_speed"
+                style="@style/DefaultTextAppearance"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.oceanForecast.waveDirectionText}"
+                android:drawableStart="@drawable/ic_wave_direction"
+                style="@style/DefaultTextAppearance"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id='@+id/waveHeight_textview'
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@{viewModel.oceanForecast.waveHeightText}"
+                android:drawableStart="@drawable/ic_wave_height"
+                style="@style/DefaultTextAppearance"
+                />
+
+            <TextView
+                android:id='@+id/seaDepth_textview'
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@{viewModel.oceanForecast.seaDepthText}"
+                android:drawableStart="@drawable/ic_sea_depth"
+                style="@style/DefaultTextAppearance"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.oceanForecast.icePresenceText}"
+                android:drawableStart="@drawable/ic_snowflake"
+                style="@style/DefaultTextAppearance"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id='@+id/jellyfishProb_textview'
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@{viewModel.oceanForecast.jellyfishProb}"
+                android:drawableStart="@drawable/ic_jellyfish_small"
+                style="@style/DefaultTextAppearance"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</layout>

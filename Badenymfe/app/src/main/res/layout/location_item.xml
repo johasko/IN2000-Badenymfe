@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="location"
+            type="com.example.badenymfe.domain.Location" />
+
+        <variable
+            name="selectLocationCallback"
+            type="com.example.badenymfe.adapter.LocationClick" />
+
+        <variable
+            name="deleteLocationCallback"
+            type="com.example.badenymfe.adapter.LocationDelete" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="5dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="4dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> selectLocationCallback.onClick(location)}">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@{location.title}"
+                android:drawableStart="@drawable/ic_place_black_24dp"
+                android:drawablePadding="8dp"
+                android:textSize="22sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/delete_button"
+                android:padding="8dp"/>
+
+            <ImageButton
+                android:id="@+id/delete_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_delete_forever_black_24dp"
+                android:background="@null"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:padding="8dp"
+                android:onClick="@{() -> deleteLocationCallback.onDelete(location)}"
+                />
+
+            <TextView
+                android:id="@+id/text_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@{location.locationString}"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textSize="14sp"
+                android:padding="8dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

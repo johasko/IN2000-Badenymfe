@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Badenymfe</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Text view text -->
+    <string name="textSelectLocation">Plasser markøren og trykk på pluss for å lagre lokasjon</string>
+    <string name="text_talking_jelly_hour">Vi har dessverre \n ingen data for denne \n posisjonen</string>
+    <string name="text_talking_jelly_locations">Trykk på pluss \n for å legge til en lokasjon \n i favoritter</string>
+
+    <!-- Button text -->
+    <string name="addLocation">Legg til posisjon</string>
+
+    <!-- Image descriptions for universal design -->
+    <string name="descriptionImagePosition">Lokasjonsbildeikon</string>
+    <string name="descriptionImageTime">Tidsbildeikon</string>
+    <string name="descriptionImageSeaTemp">Sjøtemperaturbildeikon</string>
+    <string name="descriptionImageCurrentDir">Strømretningsbildeikon</string>
+    <string name="descriptionImageCurrentSpeed">Strømningshastighetsbildeikon</string>
+    <string name="descriptionImageWaveDir">Bølgeretningsbildeikon</string>
+    <string name="descriptionImageWaveHeight">Bølgehøyderetningsikon</string>
+    <string name="descriptionImageSeaDepth">Havdybdebildeikon</string>
+    <string name="descriptionImageIcePresence">Sjøisbildeikon</string>
+
+    <!-- Maps -->
+    <string name="title_activity_maps">Kart</string>
+
+    <!-- Menu item text -->
+    <string name="menu_maps_activity">Legg til posisjon</string>
+    <string name="menu_about_fragment">Om appen</string>
+    <string name="menu_settings_fragment">Innstillinger</string>
+
+    <!-- Misc text -->
+    <string name="about_text">
+        <br>
+        \nBadenymfe bruker informasjon fra Meterologisk Institutt sine API Ocean Forecast og Location Forecast for å gi deg informasjon om vær og hav der du vil bade i Norge. For stedstjenester benyttes Google Maps sitt API.
+        \n\n </br>
+        <br>
+        \nInformasjonen fra Ocean Forecast benyttes i en algoritme som basert på forskning om maneter vurderer sannsynligheten for at det er brennmaneter på lokasjon. Denne er fortsatt under utvikling for å gi mest presis vurdering.\n
+        \nAppen er utviklet i forbindelse med faget Software Engineering med prosjektarbeid på Institutt for Informatikk ved UiO av Ellen Marie Andersen, Vilde Paschen Knudsen, Maren Zon Rafdal, Johannes Skøien, Kristin Aurora Sydhagen og Lars Erik Wik.
+        \n\n</br>
+     </string>
+
+    <string name="version">Versjon 1.0.0</string>
+
+</resources>
